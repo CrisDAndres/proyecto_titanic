@@ -19,7 +19,7 @@ El conjunto de datos se encuentra en formato CSV y está disponible en este repo
 
 ### Resultados
 
-El Notebook con el código y los resultados se encuentran en el archivo ``proyecto.titanic.ipynb``
+El Notebook con el código y los resultados se encuentran en el archivo ``proyecto_titanic_final.ipynb``
 
 
 ### Instrucciones de Ejecución 💻
