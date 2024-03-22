@@ -1,6 +1,7 @@
 # PROYECTO MÓDULO 1: DATASET TITANIC
 
-![Imagen Titanic](https://cdn.pixabay.com/photo/2023/10/06/17/14/ship-8298749_1280.png) Fuente: https://pixabay.com/
+![Imagen Titanic](https://cdn.pixabay.com/photo/2023/10/06/17/14/ship-8298749_1280.png) 
+*Fuente: https://pixabay.com/*
 Este proyecto tiene como objetivo cargar, preprocesar y analizar el conjunto de datos de los pasajeros del Titanic. El set de datos contiene información sobre pasajeros de este famoso viaje, incluyendo detalles como edad, género, clase, puerto de embarque o estado de supervivencia.
 
 ### Visualización de datos
