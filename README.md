@@ -38,7 +38,7 @@ Para ejecutar este proyecto en tu máquina local, sigue los siguientes pasos:
 
 ### To do ⚙️
 
-- [] Corrección de errores en la predicción (la página se reinicia y no da el resultado)
+- [ ] Corrección de errores en la predicción (la página se reinicia y no da el resultado)
 
 ### Contacto 📧
 
