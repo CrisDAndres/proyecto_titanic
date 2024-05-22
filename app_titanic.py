@@ -526,7 +526,7 @@ if st.sidebar.button("Predicción de la supervivencia"):
         # 4 - Diccionario de mapeo para la predicción
         prediction_mapping = {0: "No sobrevive", 1: "Sobrevive"}
             
-        # 4 - Por último decodifico utilizando los diccionarios de mapeo inverso
+        # 5 - Por último decodifico utilizando los diccionarios de mapeo inverso
         input_data['Sex'] = input_data['Sex'].replace(decoder_sex)
         
         
