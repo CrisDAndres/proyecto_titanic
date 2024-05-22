@@ -36,6 +36,10 @@ Para ejecutar este proyecto en tu máquina local, sigue los siguientes pasos:
 3. Ejecuta el script ``app_titanic.py`` el .csv, y asegúrate de tener las carpetas ``Data``, ``outputs`` y ``models`` en el mismo entorno. El código para ejecutar el script es ``streamlit run app_titanic.py``.
 4. Se abrirá el local host ``http://localhost:8501/`` y aparecerá la aplicación.
 
+### To do ⚙️
+
+- [] Corrección de errores en la predicción (la página se reinicia y no da el resultado)
+
 ### Contacto 📧
 
 Si tienes alguna pregunta o sugerencia sobre este proyecto, no dudes en contactar conmigo.
