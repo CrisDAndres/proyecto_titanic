@@ -1,13 +1,12 @@
 # ---------------------LIBRERÍAS----------------------#
 import streamlit as st
 import pandas as pd
-import numpy as np
 # visualización
 import matplotlib.pyplot as plt
 import seaborn as sns
 import plotly.express as px
 import plotly.graph_objects as go
-# mpdelado y predicción
+# modelado y predicción
 import json
 from joblib import load
 
