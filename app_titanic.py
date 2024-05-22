@@ -10,8 +10,6 @@ import plotly.graph_objects as go
 import json
 from joblib import load
 
-st.set_option('deprecation.showPyplotGlobalUse', False)
-
 # ---------------------CONFIGURACIÓN DE LA PÁGINA----------------------#
 st.set_page_config(
     page_title="TITANIC",
@@ -91,9 +89,10 @@ if st.sidebar.button("Información del dataset"):
     col1, col2 = st.columns(2) # Para que salga más pequeño el heatmap
     with col1:
         # Crear el mapa de calor con sns.heatmap()
+        fig = plt.figure()
         heatmap = sns.heatmap(df_original.isnull(), cbar=False)
         # Mostrar el mapa de calor en Streamlit
-        st.pyplot(heatmap.get_figure())
+        st.pyplot(fig)
     
     st.code("""df.duplicated().sum()""", language='python')
     st.write(df_original.duplicated().sum())
@@ -234,7 +233,7 @@ if st.sidebar.button("Análisis exploratorio de los datos"):
             ax.set_title('Distribución de los pasajeros por clases', fontsize=17, fontweight='bold')  # Establecer el título del gráfico en negrita
 
             # Mostrar el gráfico de seaborn
-            st.pyplot()
+            st.pyplot(plt.gcf()) # toma la figura actual (plt.gcf()) y la muestra en Streamlit. Esto evita el uso de pyplot global
         
     # ---------------------PESTAÑA FARE----------------------#
     with tab3: 
@@ -252,7 +251,7 @@ if st.sidebar.button("Análisis exploratorio de los datos"):
             ax.set_title('Densidad de la tarifa pagada', fontsize=18, fontweight='bold')  # Establecer el título del gráfico en negrita
 
             # Mostrar el gráfico de seaborn
-            st.pyplot()
+            st.pyplot(plt.gcf())
         
     # ---------------------PESTAÑA EMBARKED----------------------#
     with tab4: 
@@ -275,7 +274,7 @@ if st.sidebar.button("Análisis exploratorio de los datos"):
             ax.set_title('Cantidad de pasajeros por cada puerto de embarque', fontsize=18, fontweight='bold')  # Establecer el título del gráfico en negrita
 
             # Mostrar el gráfico de seaborn
-            st.pyplot()
+            st.pyplot(plt.gcf())
         
         with col2:
             st.write('Además, se puede observar como en Southampton y Queenston la mayoría de pasajeros embarcaron en 3ª clase, mientras que en Cherbour hubo mayoría de 1ª clase:')
@@ -295,7 +294,7 @@ if st.sidebar.button("Análisis exploratorio de los datos"):
             ax.set_title('Cantidad de pasajeros por cada puerto de embarque', fontsize=18, fontweight='bold')  # Establecer el título del gráfico en negrita
 
             # Mostrar el gráfico de seaborn
-            st.pyplot()
+            st.pyplot(plt.gcf())
             
     # ---------------------PESTAÑA SURVIVED----------------------#
 
@@ -359,7 +358,7 @@ if st.sidebar.button("Estudio de la supervivencia"):
             ax.legend(handles=handles, labels=new_labels, title='Género',fontsize=14, title_fontsize=14)
     
             # Mostrar el gráfico de seaborn
-            st.pyplot()
+            st.pyplot(plt.gcf())
         
     # ---------------------PESTAÑA VS EDAD----------------------#
 
@@ -385,7 +384,7 @@ if st.sidebar.button("Estudio de la supervivencia"):
             # Cambiar el tamaño de la fuente de las etiquetas de la leyenda
             ax.set_title('Densidad de pasajeros supervivientes/no supervivientes según su edad', fontsize=18, fontweight='bold')  # Establecer el título del gráfico en negrita
             # Mostrar el gráfico de seaborn
-            st.pyplot()
+            st.pyplot(plt.gcf())
             
             st.markdown('**Más información en pocentajes:**')
             # Texto con formato HTML y estilos CSS
@@ -428,8 +427,8 @@ if st.sidebar.button("Estudio de la supervivencia"):
             plt.legend(title='Clase', fontsize = 18, title_fontsize=18)
 
             # Mostrar el gráfico de seaborn
-            st.pyplot()
-        
+            st.pyplot(plt.gcf())
+            
             st.write('Esta relación entre las clases y la supervivencia puede observarse también al analizar la relación entre los supervivientes y las **tarifas** de los billetes:')
             # Texto con formato HTML y estilos CSS
             st.markdown('Media de las tarifas pagadas por los supervivientes: <span style="font-size:22px;">**18.91**</span> £.', unsafe_allow_html=True)
@@ -463,7 +462,7 @@ if st.sidebar.button("Estudio de la supervivencia"):
             ax2.set_xlabel('') 
             plt.legend(title='Título', fontsize = 13, title_fontsize=13)
             # Mostrar el gráfico de seaborn
-            st.pyplot()
+            st.pyplot(plt.gcf())
                 
 # ---------------------PAGE 5----------------------#
       
