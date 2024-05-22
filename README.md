@@ -14,7 +14,6 @@ Este proyecto tiene como objetivo cargar, preprocesar y analizar el conjunto de 
     - En la misma carpeta también se encuentra el CSV de los datos preprocesados (``titanic_preprocessed.csv``) para su uso en la app de Streamlit.
 
 - **Código**: El código usado puede visualizarse en la carpeta ``notebooks``, que incluye 2 notebooks de Jupyter con diferentes secciones:
-
     1. Preprocessing_EDA.ipynb:
 
     - Carga de librerías y lectura del dataset
@@ -22,9 +21,7 @@ Este proyecto tiene como objetivo cargar, preprocesar y analizar el conjunto de 
     - Pre-procesamiento de los datos: reparación valores nulos y atípicos
     - Exploración, análisis y visualización de los datos (EDA)
     - Conclusiones
-
-    2. ML_forecasting.ipynb:
-    
+    2. ML_forecasting.ipynb:   
     - Implementación de modelos de aprendizaje automático para la predicción de la supervivencia (modelos de clasificación)
 
 - **Aplicación de Streamlit**: Se ha desarrollado una aplicación en Streamlit para la exploración de los datos analizados de una manera visual e interactiva. Está disponible en https://titanic-project-00.streamlit.app/
